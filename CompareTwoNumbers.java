@@ -15,5 +15,6 @@ class CompareTwoNumbers{
         else{
             System.out.println("Both are equal");
         }
+        scanner.close();
     }
 }

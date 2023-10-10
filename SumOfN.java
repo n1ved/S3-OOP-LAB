@@ -9,5 +9,6 @@ class SumOfN{
             sum = sum + i;
         }
         System.out.println("Sum is "+sum);
+        scanner.close();
     }
 }
