@@ -1,0 +1,73 @@
+1 . Print 'Hello World'
+-------------------------------
+❯ javac HelloWorld.java
+❯ java HelloWorld
+Hello World
+
+2 . Print Sum of N numbers
+-------------------------------
+❯ javac SumOfN.java
+❯ java SumOfN
+Enter a number : 5
+Sum is 15
+
+3 . java program to compare two number
+-------------------------------
+❯ javac CompareTwoNumbers.java
+❯ java CompareTwoNumbers
+Enter two numbers : 3 5
+3 is less than 5
+
+4 . java program for fibonocchi series
+-------------------------------
+❯ javac Fibonacci.java
+❯ java Fibonacci
+Enter limit : 5
+0 1 1 2 3 5 8 
+
+5 . java program to check whether a number is palindrome
+-------------------------------
+❯ javac NumberPalindrome.java
+❯ java NumberPalindrome
+Enter a number : 12321
+Number is a Palindrome
+
+5 . java program to perform matrix multiplication
+------------------------------
+❯ javac MatrixMulti.java
+❯ java MatrixMulti
+Enter row and column of Matrix A : 2 3
+Enter row and column of Matrix B : 3 2
+Enter Matrix A[2][3]
+1 2 3
+4 5 6
+Enter Matrix A[3][2]
+10 11
+20 21
+30 31
+Resultant Matrix
+140 146 
+320 335 
+
+6 . java program to perform matrix addition
+------------------------------
+❯ javac MatrixSum.java
+❯ java MatrixSum
+Enter row and column of Matrices: 2 2
+Enter Matrix A[2][2]
+1 2 
+3 4
+Enter Matrix A[2][2]
+5 6
+7 8
+Resultant Matrix
+6 8 
+10 12 
+
+7 . java program to check frequency of a charecter in a String
+------------------------------
+❯ javac RepeatedLetter.java
+❯ java RepeatedLetter
+Enter a string : Hello
+Enter a character : l
+l is repeated 2 times
