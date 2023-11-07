@@ -16,3 +16,17 @@ class ConstructorWithDefaultValueTest{
         System.out.println(tc2.name);
     }
 }
+
+
+
+class String{
+    //Instance variables
+
+}
+
+class Apple{
+
+    String color;
+    int radius;
+    int weight;
+}
