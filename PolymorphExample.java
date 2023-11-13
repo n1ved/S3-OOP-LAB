@@ -1,5 +1,5 @@
-class Shape{
-    void numberOfSides(){}
+abstract class Shape{
+    abstract void numberOfSides();
 }
 
 class Rectangle extends Shape{
@@ -21,8 +21,6 @@ class Hexagon extends Shape{
 }
 public class PolymorphExample {
     public static void main(String[] args) {
-        Shape shape = new Shape();
-        shape.numberOfSides();
         Rectangle rectangle = new Rectangle();
         rectangle.numberOfSides();
         Triangle triangle = new Triangle();
