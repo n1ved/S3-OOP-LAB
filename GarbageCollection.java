@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 class GarbageCollection {
     public static void main(String[] args) {
         Runtime rt = Runtime.getRuntime();
@@ -15,8 +16,11 @@ class GarbageCollection {
         }
         mem2 = rt.freeMemory();
         System.out.println("Free memory after allocation: " + mem2);
+        a = null;
+        sc = null;
         rt.gc();
-        mem3 = rt.freeMemory();
+        Runtime rs = Runtime.getRuntime();
+        mem3 = rs.freeMemory();
         System.out.println("Free memory after garbage collection: " + mem3);        
     }    
 }
