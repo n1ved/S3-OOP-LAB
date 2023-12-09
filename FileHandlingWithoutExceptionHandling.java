@@ -10,7 +10,7 @@ public class FileHandlingWithoutExceptionHandling {
 
         //try creating file if exists already print so
         if(file.createNewFile()){
-            System.out.println("File created");
+            System.out.println(file.getAbsolutePath());
         }
         else{
             System.out.println("File already exits");
