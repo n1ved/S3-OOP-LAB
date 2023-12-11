@@ -6,23 +6,23 @@ public class ExceptionHandlingDemo{
         int c;
         try{
             c = x/y;
+            if(c == 0){
+                throw new ArithmeticException("Result is zero");
+            }
+            System.out.println("Result is " + c);
         }
         catch(ArithmeticException e){
-            System.out.println(e);
+            System.out.println("Error : "+e.getMessage());
         }
-    }
-
-    static void throwErrorExample(){
-        try{
-            throw new Exception("thrown an exception");
-        }
-        catch(Exception e){
-            System.out.println(e);
+        finally{
+            System.out.println("finally block executed");
+            System.out.println();
         }
     }
 
     public static void main(String[] args) {
         divide(1,0);
-        throwErrorExample();
+        divide(0, 2);
+        divide(10, 2);
     }
 }

@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 class Node{
 	int data;
@@ -40,7 +41,7 @@ public class DoublyLinkedList{
 			tail = temp;
 		}
 		else{
-			temp.prev = head;
+			temp.prev = tail;
 			tail.next = temp;
 			tail = temp;
 		}
@@ -83,24 +84,52 @@ public class DoublyLinkedList{
     { 
         Node temp = head; 
         while (temp != null) { 
-            System.out.print(temp.data + " --> "); 
+            System.out.print(temp.data + " "); 
             temp = temp.next; 
         } 
-        System.out.println("NULL"); 
+        System.out.println(); 
     } 
     
 	public static void main(String[] args) {
-			init();
-			AddNodeFront(1);
-			AddNodeFront(2);
-			AddNodeFront(3);
-			AddNodeFront(4);
-			AddNodeRear(5);
-			display(head);
-			
-			RemoveNodeFront();
-			
-			display(head);
+		Scanner scanner = new Scanner(System.in);
+		init();
+		int o;
+		System.out.println("1. Add Node Front");
+		System.out.println("2. Add Node Rear");
+		System.out.println("3. Remove Node Front");
+		System.out.println("4. Remove Node Rear");
+		System.out.println("5. Display");
+		System.out.println("6. Exit");
+		while(true){
+			System.out.print("Enter your choice : ");
+			o = scanner.nextInt();
+			switch(o){
+				case 1:
+					System.out.print("Enter data : ");
+					int data = scanner.nextInt();
+					AddNodeFront(data);
+					break;
+				case 2:
+					System.out.print("Enter data : ");
+					data = scanner.nextInt();
+					AddNodeRear(data);
+					break;
+				case 3:
+					RemoveNodeFront();
+					break;
+				case 4:
+					RemoveNodeRear();
+					break;
+				case 5:
+					display(head);
+					break;
+				case 6:
+					System.exit(0);
+					break;
+				default:
+					System.out.println("Invalid choice");
+			}
+		}
 			
 	}
 }

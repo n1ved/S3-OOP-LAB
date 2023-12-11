@@ -12,8 +12,11 @@ public class TokenizedSum{
 		int sum = 0;
 		
 		while(tokenizedInt.hasMoreTokens()){
-			sum += Integer.parseInt(tokenizedInt.nextToken());
+			int temp = Integer.parseInt(tokenizedInt.nextToken());
+			System.out.print(temp + " ");
+			sum += temp;
 		}
+		System.out.println();
 		System.out.println("Sum is "+sum);
 	}
 }
