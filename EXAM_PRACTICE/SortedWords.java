@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
@@ -31,13 +32,12 @@ public class SortedWords{
         return str;
     }
     public static void main(String args[]){
-        StringBuilder str = new StringBuilder();
-        for(int i=0 ; i<args.length ; i++){
-            str.append(args[i] +" ");
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Words : ");
+        String str = scanner.nextLine();
 
-        StringTokenizer tokens = new StringTokenizer(str.toString());
-        File file = new File("sortedwords.txt");
+        StringTokenizer tokens = new StringTokenizer(str);
+        File file = new File(args[0]);
 
         try{
             FileOutputStream fos = new FileOutputStream(file);
@@ -76,5 +76,6 @@ public class SortedWords{
             System.out.println(e.getStackTrace());
         }
 
+        scanner.close();
     }
 }
