@@ -6,7 +6,7 @@ public class SynchronizedPrinter {
     JButton button;
     static int n = 0;
 
-    static synchronised void printDataSync(String data){
+    static synchronized void printDataSync(String data){
         for(int i=0 ; i<n ; i++){
             System.out.println(data);
             try{
