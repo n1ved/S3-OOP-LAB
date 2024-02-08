@@ -6,9 +6,15 @@ public class SynchronizedPrinter {
     JButton button;
     static int n = 0;
 
-    static synchronized void printDataSync(String data){
+    static void printDataSync(String data){
         for(int i=0 ; i<n ; i++){
             System.out.println(data);
+            try{
+                Thread.sleep(1000);
+            }
+            catch(Exception e){
+                System.out.println(e.getMessage());
+            }
         }
     }
 
